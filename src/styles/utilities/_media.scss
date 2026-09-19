@@ -1,0 +1,43 @@
+@use 'functions' as *;
+
+$laptop: 1500.98;
+$tablet: 1023.98;
+$mobile: 767.98;
+
+@mixin mobile {
+  @content;
+}
+
+@mixin tablet-up {
+  @media (min-width: rem($mobile + 1)) {
+    @content;
+  }
+}
+
+@mixin laptop-up {
+  @media (min-width: rem($tablet + 1)) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: rem($laptop + 1)) {
+    @content;
+  }
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}

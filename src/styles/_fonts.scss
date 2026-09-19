@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'Inria Sans';
+  src:
+    local('Inria Sans'),
+    local('InriaSans'),
+    url('./../fonts/InriaSans-Bold.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Inria Sans';
+  src:
+    local('Inria Sans'),
+    local('InriaSans'),
+    url('./../fonts/InriaSans-Regular.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Inria Sans';
+  src:
+    local('Inria Sans'),
+    local('InriaSans'),
+    url('./../fonts/InriaSans-Light.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Kumbh Sans';
+  src:
+    local('Kumbh Sans'),
+    local('KumbhSans'),
+    url('./../fonts/KumbhSans-Regular.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}

@@ -17,7 +17,7 @@ function App({ appContainer }: AppProps) {
       <Route path="/login" element={<LoginPage />} />
 
       <Route element={<ProtectedRoute appContainer={appContainer} />}>
-        <Route path="/home" />
+        <Route path="" />
         <Route path="/calendar" />
         <Route path="/catalog" />
         <Route path="/settings" />
