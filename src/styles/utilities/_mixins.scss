@@ -13,7 +13,7 @@
 }
 
 @mixin card {
-  background: $color-def-white;
+  background: $color-def-bg;
   border: 0.1rem solid $color-def-border;
   border-radius: $radius-lg;
   box-shadow: 0 0.8rem 2.4rem $color-shadow;
@@ -33,14 +33,9 @@
   visibility: visible;
 }
 
-@mixin flex-center($isInline: false, $direction: row) {
-  @if $isInline {
-    display: inline-flex;
-  } @else {
-    display: flex;
-    flex-direction: $direction;
-  }
-
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
   justify-content: center;
   align-items: center;
 }

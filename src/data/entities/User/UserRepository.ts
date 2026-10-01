@@ -10,6 +10,10 @@ export class UserRepository {
     this.queryClient = queryClient;
   }
 
+  async login(body: { username: string; password: string }) {
+    return api.login(body);
+  }
+
   useUser() {
     return useQuery({
       queryKey: usersKeys.me(),
@@ -27,8 +31,7 @@ export class UserRepository {
   }
 
   async logout() {
-    api.logout().then(() => {
-      this.queryClient.clear();
-    });
+    await api.logout();
+    this.queryClient.clear();
   }
 }

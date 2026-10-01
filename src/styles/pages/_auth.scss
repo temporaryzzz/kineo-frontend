@@ -1,0 +1,54 @@
+@use '../utilities' as *;
+@use '../globals' as *;
+
+.auth-container {
+  @include flex-center(column);
+  height: 100dvh;
+  row-gap: #{rem(15)};
+}
+
+.auth-form {
+  @include flex-center(column);
+  @include card;
+  padding: #{fluid(20, 10)};
+  row-gap: #{rem(15)};
+  background-color: $color-second-bg;
+  border: 1px solid $color-light-bg;
+  padding: rem(20);
+
+  div {
+    @include flex-center(column);
+    column-gap: #{rem(10)};
+    row-gap: #{rem(5)};
+  }
+
+  input[type='text'],
+  [type='password'] {
+    background-color: $color-soft-white;
+    border-radius: $radius-md;
+    padding-block: 3px;
+  }
+
+  input[type='text']:focus-visible,
+  [type='password']:focus-visible {
+    outline: 1px solid $color-def-accent;
+  }
+
+  button {
+    width: 100%;
+    background-color: $color-def-accent;
+  }
+
+  &__error {
+    color: $color-red-accent;
+    font-size: $font-size-xs;
+    white-space: pre-line;
+    text-align: center;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  &__remember {
+    font-weight: 300;
+  }
+}

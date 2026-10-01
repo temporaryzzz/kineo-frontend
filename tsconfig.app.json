@@ -23,9 +23,8 @@
 
     "paths": {
       "@/*": ["./src/*"],
-      "@shared/*": ["./src/shared/*"],
-      "@features/*": ["./src/features/*"],
-      "@entities/*": ["./src/entities/*"],
+      "@shared/*": ["./src/data/shared/*"],
+      "@entities/*": ["./src/data/entities/*"],
       "@ui/*": ["./src/ui/*"]
     }
   },

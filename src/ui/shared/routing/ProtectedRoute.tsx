@@ -1,11 +1,8 @@
 import { Navigate, Outlet } from 'react-router';
-import type { AppContainer } from '@/di/AppContainer';
+import { useAppContainer } from '@/di/AppContainerContext';
 
-type ProtectedRouteProps = {
-  appContainer: AppContainer;
-};
-
-export function ProtectedRoute({ appContainer }: ProtectedRouteProps) {
+export function ProtectedRoute() {
+  const appContainer = useAppContainer();
   const userQuery = appContainer.getUserRepository().useUser();
 
   if (userQuery.isPending) {

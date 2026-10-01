@@ -14,6 +14,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(import.meta.dirname, './src'),
       '@entities': path.resolve(import.meta.dirname, './src/data/entities'),
+      '@shared': path.resolve(import.meta.dirname, './src/data/shared'),
       '@ui': path.resolve(import.meta.dirname, './src/ui'),
     },
   },

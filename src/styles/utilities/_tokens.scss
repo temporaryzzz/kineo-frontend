@@ -1,26 +1,25 @@
 //⁡⁢⁣⁣COLORS⁡
-$color-def-bg: #f5f7fb;
-$color-def-white: #ffffff;
-$color-soft-white: #eef3ff;
-$color-def-accent: #4f46e5;
-$color-soft-accent: #3730a3;
-$color-primary-soft: rgba(79, 70, 229, 0.12);
-$color-second-accent: #10b981;
-$color-def-text: #111827;
-$color-muted-text: #6b7280;
-$color-soft-text: #9ca3af;
-$color-def-border: #e5e7eb;
-$color--strong-border: #cbd5e1;
-$color-warning: #f59e0b;
-$color-error: #ef4444;
+$color-def-bg: #141414;
+$color-second-bg: #1a1a1a;
+$color-light-bg: #262626;
+$color-def-white: #e4e4e7;
+$color-soft-white: #d8d5d5;
+$color-def-accent: #80d53e;
+$color-soft-accent: #abee78;
+$color-yellow-accent: #faec53;
+$color-red-accent: #ee5555;
+$color-def-text: #e4e4e7;
+$color-muted-text: #595959;
+$color-def-border: #1d1d1d;
+$color-warning: #e49e25;
 $color-shadow: rgba(15, 23, 42, 0.08);
 
 //⁡⁢⁣⁣FONTS⁡
-$font-def: 'Inria Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-$font-second: 'Kumbh Sans', 'Segoe UI', Arial, sans-serif;
+$font-def: 'Inria Sans', Roboto, Helvetica, Arial, sans-serif;
+$font-second: 'Kumbh Sans', Arial, sans-serif;
 
-$font-local-def: 'Inria Sans', 'Segoe UI', sans-serif;
-$font-local-second: 'Kumbh Sans', 'Segoe UI', sans-serif;
+$font-local-def: 'Inria Sans', sans-serif;
+$font-local-second: 'Kumbh Sans', sans-serif;
 
 //⁡⁢⁣⁣SIZES⁡
 $font-size-xs: 0.75rem;

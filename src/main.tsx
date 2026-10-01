@@ -6,6 +6,7 @@ import App from './App.tsx';
 import { BrowserRouter } from 'react-router';
 import { queryClient } from './data/shared/queryClient';
 import { AppContainer } from './di/AppContainer';
+import { AppContainerProvider } from './di/AppContainerContext';
 
 const appContainer = new AppContainer(queryClient);
 
@@ -13,7 +14,9 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <App appContainer={appContainer} />
+        <AppContainerProvider appContainer={appContainer}>
+          <App />
+        </AppContainerProvider>
       </BrowserRouter>
     </QueryClientProvider>
   </StrictMode>,
