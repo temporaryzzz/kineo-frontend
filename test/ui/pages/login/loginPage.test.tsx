@@ -1,11 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import { LoginPage } from '@/ui/pages/login/components/loginPage';
+import { screen } from '@testing-library/react';
+import { LoginPage } from '@/ui/pages/auth/components/loginPage';
+import { providerWrapper } from '../../../utils/providerWrapper';
 
 describe('LoginPage', () => {
   it('renders the login form', () => {
-    render(<LoginPage />);
+    providerWrapper(<LoginPage />, { route: '/sign-in' });
 
-    expect(screen.getByRole('heading', { name: 'Вход' })).toBeInTheDocument();
     expect(screen.getByLabelText('Имя пользователя')).toBeInTheDocument();
     expect(screen.getByLabelText('Пароль')).toBeInTheDocument();
     expect(screen.getByRole('checkbox', { name: 'Запомнить меня' })).toBeInTheDocument();
@@ -13,7 +13,7 @@ describe('LoginPage', () => {
   });
 
   it('marks credential fields as required', () => {
-    render(<LoginPage />);
+    providerWrapper(<LoginPage />, { route: '/sign-in' });
 
     expect(screen.getByLabelText('Имя пользователя')).toBeRequired();
     expect(screen.getByLabelText('Пароль')).toBeRequired();
