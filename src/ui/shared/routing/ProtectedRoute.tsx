@@ -10,7 +10,7 @@ export function ProtectedRoute() {
   }
 
   if (userQuery.isError || !userQuery.data) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/sign-in" replace />;
   }
 
   return <Outlet />;

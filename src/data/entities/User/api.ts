@@ -8,6 +8,11 @@ export async function login(body: { username: string; password: string }) {
   return response.data;
 }
 
+export async function register(body: { username: string; password: string }) {
+  const response = await axiosInstance.post('/register', body);
+  return response.data;
+}
+
 export async function logout() {
   const response = await axiosInstance.post('/logout');
 

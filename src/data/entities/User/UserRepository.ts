@@ -34,4 +34,9 @@ export class UserRepository {
     await api.logout();
     this.queryClient.clear();
   }
+
+  async register(body: { username: string; password: string }) {
+    await api.register(body);
+    this.queryClient.clear();
+  }
 }

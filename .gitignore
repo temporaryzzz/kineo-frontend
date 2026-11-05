@@ -7,12 +7,13 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-coverage
+coverage/
 node_modules
 dist
 dist-ssr
 *.local
 /COMMIT_KEYWORDS.md
+/context.md
 
 # Editor directories and files
 .vscode/*

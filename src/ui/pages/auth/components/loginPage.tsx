@@ -1,5 +1,5 @@
 import { useState, type SubmitEvent } from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate, Link } from 'react-router';
 import { useAppContainer } from '@/di/AppContainerContext';
 
 export function LoginPage() {
@@ -42,6 +42,8 @@ export function LoginPage() {
               name="username"
               type="text"
               autoComplete="username"
+              minLength={2}
+              maxLength={18}
               placeholder="username"
               value={username}
               onChange={(event) => setUsername(event.target.value)}
@@ -56,6 +58,8 @@ export function LoginPage() {
               name="password"
               type="password"
               autoComplete="current-password"
+              minLength={4}
+              maxLength={18}
               placeholder="password"
               value={password}
               onChange={(event) => setPassword(event.target.value)}
@@ -73,10 +77,13 @@ export function LoginPage() {
             </p>
           </div>
           <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? 'Входим...' : 'Войти'}
+            {isSubmitting ? 'Signing in...' : 'Sign in'}
           </button>
         </form>
       </section>
+      <Link to="/sign-up" className="additionaly-info additionaly-info__ref">
+        Don't have an account?
+      </Link>
     </main>
   );
 }
